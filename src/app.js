@@ -19,4 +19,13 @@ app.use(express.static("public"));
 
 app.use(cookieParser());
 
+// import routes(HERE FOR SEGREGATION)
+
+import { router } from "./routes/user.router.js";
+
+// route declaration
+app.use("/api/v1/users", router);
+
+//http://localhost:4000/api/v1/users/register
+
 export default app;
