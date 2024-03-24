@@ -24,4 +24,9 @@
 - cloudinary server for handling files
 - controller for registering users
 - http methods, different status code
-- postman user for testing
+- postman for testing
+
+# write controller for registering user
+
+- write algorithm how to resister user properly
+- test it by using postman
