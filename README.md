@@ -26,7 +26,23 @@
 - http methods, different status code
 - postman for testing
 
-# write controller for registering user
+# write controller
 
-- write algorithm how to resister user properly
-- test it by using postman
+- registering user
+
+  - write algorithm how to resister user properly
+  - test it by using postman
+
+- login user
+
+  - write authenticate logic like verify user, password
+  - generate accessToken, refreshToken
+  - save it in user cookie as well as in db
+
+- logout user
+
+  - create custom middleware for access user data with request and response object
+  - clear cookie
+  - clear refreshToken from db
+
+- refresh access token

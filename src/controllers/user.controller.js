@@ -148,6 +148,9 @@ const loginUser = AsyncHandler(async (req, res) => {
 });
 
 const logoutUser = AsyncHandler(async (req, res) => {
+  //create a custom middleware for accessing info of user in our requst and response object
+  //clear cookies in user browser
+  //clear refresh token of user in database
   await User.findByIdAndUpdate(
     req.user._id,
     {
@@ -157,7 +160,7 @@ const logoutUser = AsyncHandler(async (req, res) => {
     },
 
     {
-      new: true,
+      new: true, //[options.new=false] «Boolean» if true, return the modified document rather than the original
     }
   );
 
